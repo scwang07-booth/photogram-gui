@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "user", :action => "index" })
-  get("/users", { :controller => "user", :action => "index" })
-  get("/users/:an_id", { :controller => "user", :action => "user_details" })
+  get("/", { :controller => "users", :action => "index" })
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:path_username", { :controller => "users", :action => "user_details" })
 
 end
