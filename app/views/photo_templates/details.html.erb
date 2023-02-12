@@ -14,10 +14,20 @@
   <dd><%= @the_photo.created_at %></dd>
   
   <dt>Edit photo</dt>
-  <dd>forms go here<dd>
+    <dd>
+      <form action ="/update_photo/<%= @the_photo.id %>">
+        <label for="browser_image">Image</label>
+        <input id="browser_image" type="text" name="input_image"
+        placeholder="Enter a URL for the image..." value ="<%= @the_photo.image %>">
+
+        <label for="browser_caption">Caption</label>
+        <textarea id="browser_caption" name="input caption" placeholder="Enter a caption for the photo..."><%= @the_photo.caption %></textarea>
+        <button>Update photo</button>
+      </form>
+    </dd>
 
   <dt>Delete photo</dt>
-  <dd>Delete this photo<dd>
+  <dd><a href = "/delete_photo/<%= @the_photo.id %>">Delete this photo</a></dd>
 
 </dl>
 
@@ -46,4 +56,14 @@
 
 <h3>Add a new comment</h3>
 
-Photo ID
+<form action = "/add_comment/<%= @the_photo.id %>">
+  <label for="browser_comment">Photo ID</label>
+  <input id="browser_comment" type = "text" name="input_comment" value = "<%= @the_photo.id %>"></input>
+
+  <label for="author_comment">Author ID</label>
+  <input id="author_comment" type = "text" name="input_author"></input>
+
+  <label for="comment_body">Comment</label>
+  <textarea id="comment_body" name="input_comment_body" placeholder="Enter a comment..."></textarea>
+  <button>Add comment</button>
+</form>
