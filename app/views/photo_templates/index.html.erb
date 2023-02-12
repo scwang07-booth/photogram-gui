@@ -1,6 +1,16 @@
 <h1>List of photos</h1>
 
+<form action = "/add_photo">
+  <label for="image_url">Image</label>
+  <input id="image_url" type="text" placeholder="Enter a URL for the image..." name="query_image"></input>
+  <label for="caption_text">Caption</label>
+  <textarea id="caption_text" name ="query_caption" placeholder="Enter a caption for the photo..."></textarea>
+  <label for="owner_id">Owner ID</label>
+  <input id="owner_id" type="text" placeholder="Enter an ID of a User" name="query_owner_id"></input>
+  <button>Add photo</button>
+</form>
 
+<hr>
 
 <table border="1">
   <tr>
